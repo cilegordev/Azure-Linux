@@ -1,2 +1,71 @@
+#!/bin/sh
+set -e
+
 mount -t proc proc /proc
-/lib/systemd/systemd
+mount -t sysfs sys /sys
+mount -t devtmpfs devtmpfs /dev
+
+BOOTMODE=live
+for x in $(cat /proc/cmdline); do
+    case "$x" in
+        bootmode=*)
+            BOOTMODE="${x#bootmode=}"
+            ;;
+    esac
+done
+
+echo "Boot mode: $BOOTMODE" > /dev/kmsg
+
+if [ "$BOOTMODE" = "installer" ]; then
+    exec /lib/systemd/systemd
+    exec /root/runliveinstaller
+fi
+
+for mod in loop squashfs overlay iso9660 \
+           usbcore usb_common usb_storage sd_mod scsi_mod \
+           xhci_pci ehci_pci uhci_hcd ohci_hcd ohci_pci; do
+    modprobe "$mod" 2>/dev/null
+done
+
+mkdir -p /overlayfs
+mount -r -t iso9660 /dev/sr0 /overlayfs 2>/dev/null || {
+    FOUND=""
+    for i in $(seq 1 10); do
+        for dev in /dev/sd?1 /dev/sd? /dev/nvme?n?p1 /dev/nvme?n?; do
+            if mount -r "$dev" /overlayfs 2>/dev/null; then
+                if [ -f /overlayfs/liveos/rootfs.img ]; then
+                    FOUND=1
+                    break 2
+                fi
+                umount /overlayfs
+            fi
+        done
+        sleep 1
+    done
+
+    [ -z "$FOUND" ] && exec sh
+}
+
+mkdir -p /lower
+mount -o loop,ro -t squashfs /overlayfs/liveos/rootfs.img /lower
+
+mkdir -p /overlay
+mount -t tmpfs tmpfs /overlay
+mkdir -p /overlay/upper /overlay/work /rootfs
+
+mount -t overlay overlay \
+    -o lowerdir=/lower,upperdir=/overlay/upper,workdir=/overlay/work \
+    /rootfs
+
+mkdir -p /rootfs/mnt/cdrom
+mount --move /overlayfs /rootfs/mnt/cdrom
+
+mount --move /proc /rootfs/proc
+mount --move /sys /rootfs/sys
+mount --move /dev /rootfs/dev
+
+cd /
+
+echo -e "\033[1;37m[\033[0;32m    -!!-    \033[1;37m] \033[0;33mcilegordev.github.io\033[0m"
+
+exec switch_root /rootfs /sbin/init
