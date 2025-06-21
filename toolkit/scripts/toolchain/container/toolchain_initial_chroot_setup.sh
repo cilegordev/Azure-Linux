@@ -87,14 +87,14 @@ EOF
 
 cat > /etc/os-release << "EOF"
 NAME="Azure Linux Toolchain"
-VERSION="3.0.2024"
+VERSION="3.0.2025"
 ID=azurelinux
 VERSION_ID="3.0"
 PRETTY_NAME="Azure Linux 3.0"
 ANSI_COLOR="1;34"
-HOME_URL="https://aka.ms/cbl-mariner"
-BUG_REPORT_URL="https://aka.ms/cbl-mariner"
-SUPPORT_URL="https://aka.ms/cbl-mariner"
+HOME_URL="https://aka.ms/azurelinux"
+BUG_REPORT_URL="https://aka.ms/azurelinux"
+SUPPORT_URL="https://aka.ms/azurelinux"
 EOF
 cat /etc/os-release
 
