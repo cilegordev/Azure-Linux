@@ -142,9 +142,12 @@ SOURCE_URL         ?= https://azurelinuxsrcstorage.blob.core.windows.net/sources
 # assignments do not take affect without using 'override'. This means that all of the following PACKAGE_URL_LIST values will
 # be ignored if the user sets any value.
 ##help:var:PACKAGE_URL_LIST:<urls_list>=Space-separated list of URLs to download toolchain RPM packages from, used to populate the toolchain packages if `REBUILD_TOOLCHAIN=n'. The URLs will replace the default set of URLs. Print default list with 'make -s printvar-PACKAGE_URL_LIST'.
-PACKAGE_URL_LIST   ?= https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/base/$(build_arch)
-PACKAGE_URL_LIST   += https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/base/debuginfo/$(build_arch)
+PACKAGE_URL_LIST   += https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/base/$(build_arch)
+PACKAGE_URL_LIST   += https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/extended/$(build_arch)
 PACKAGE_URL_LIST   += https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/ms-oss/$(build_arch)
+PACKAGE_URL_LIST   += https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/ms-non-oss/$(build_arch)
+PACKAGE_URL_LIST   += https://cilegordev.github.io/azurelinux-repos-env/
+PACKAGE_URL_LIST   ?= https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/base/debuginfo/$(build_arch)
 REPO_LIST          ?=
 SRPM_URL_LIST      ?= https://packages.microsoft.com/azurelinux/$(RELEASE_MAJOR_ID)/prod/base/srpms
 
