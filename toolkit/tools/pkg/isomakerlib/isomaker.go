@@ -27,7 +27,7 @@ import (
 )
 
 const (
-	DefaultVolumeId = "CDROM"
+	DefaultVolumeId = "AZURELINUX"
 
 	efiBootImgPathRelativeToIsoRoot = "boot/grub2/efiboot.img"
 	initrdEFIBootDirectoryPath      = "boot/efi/EFI/BOOT"
