@@ -5,7 +5,7 @@
                 {
                     "Name": "iso-initrd",
                     "Type": "initrd",
-                    "Compression": "tar.gz"
+                    "Compression": "tar.xz"
                 }
             ]
         }
@@ -31,7 +31,9 @@
                 "additionalfiles/iso_initrd/init": "/init",
                 "additionalfiles/iso_initrd/installer/calamares-EULA.txt": "/etc/calamares/azl-eula",
                 "additionalfiles/iso_initrd/installer/terminal-EULA.txt": "/installer/EULA.txt",
+                "additionalfiles/iso_initrd/root/bashrc": "/root/.bashrc",
                 "additionalfiles/iso_initrd/root/asoundrc": "/root/.asoundrc",
+                "additionalfiles/iso_initrd/root/bash_profile": "/root/.bash_profile",
                 "additionalfiles/iso_initrd/root/runliveinstaller": "/root/runliveinstaller",
                 "additionalfiles/iso_initrd/root/silence.wav": "/root/silence.wav",
                 "additionalfiles/iso_initrd/usr/lib/mariner/terminfo/mariner-installer": "/usr/lib/mariner/terminfo/m/mariner-installer",
@@ -42,8 +44,7 @@
             "Users": [
                 {
                     "Name": "root",
-                    "PasswordExpiresDays": 99999,
-                    "StartupCommand": "/root/runliveinstaller"
+                    "PasswordExpiresDays": 99999
                 }
             ],
             "DisableRpmDocs": true
