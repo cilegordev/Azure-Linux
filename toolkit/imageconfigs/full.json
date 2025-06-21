@@ -1,7 +1,22 @@
 {
     "SystemConfigs": [
+                {
+            "Name": "Azure Linux Core",
+            "PackageLists": [
+                "packagelists/grub2-mkconfig.json",
+                "packagelists/hyperv-packages.json",
+                "packagelists/core-packages-image.json",
+                "packagelists/virt-guest-packages.json"
+            ],
+            "KernelOptions": {
+                "default": "kernel"
+            },
+            "AdditionalFiles": {
+                "additionalconfigs/99-dhcp-en.network": "/etc/systemd/network/99-dhcp-en.network"
+            }
+        },
         {
-            "Name": "Azure Linux Full",
+            "Name": "Azure Linux Standard",
             "PackageLists": [
                 "packagelists/grub2-mkconfig.json",
                 "packagelists/developer-packages.json",
@@ -25,13 +40,18 @@
             }
         },
         {
-            "Name": "Azure Linux Core",
+            "Name": "Azure Linux Desktop Experience",
             "PackageLists": [
-                "packagelists/grub2-mkconfig.json",
-                "packagelists/hyperv-packages.json",
+		"packagelists/cli-tools-packages.json",
                 "packagelists/core-packages-image.json",
-                "packagelists/virt-guest-packages.json"
+                "packagelists/desktop-experience-packages.json",
+                "packagelists/grub2-mkconfig.json",
+                "packagelists/selinux-full.json",
+                "packagelists/ssh-server.json"
             ],
+            "KernelCommandLine": {
+                "SELinux": "permissive"
+            },
             "KernelOptions": {
                 "default": "kernel"
             },
