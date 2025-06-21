@@ -38,7 +38,7 @@ done
 
 # Mounting the ISO root for the installer.
 mkdir -p $ISO_ROOT
-LABEL=CDROM
+LABEL=AZURELINUX
 
 function retry {
     local retry=0
@@ -126,16 +126,19 @@ if [[ ! -f "$UNATTENDED_CONFIG_FILE" ]]; then
     # This is a temporary workaround that is needed for VirtualBox,
     # which is currently the most convenient platform to test on which
     # has sound driver support. It creates a bit of hiss.
-    speaker-test -l0 -t wav -w ../../../../root/silence.wav -r 22050 >/dev/null 2>&1 &
+    # speaker-test -l0 -t wav -w ../../../../root/silence.wav -r 22050 >/dev/null 2>&1 &
 
     # Set better defaults for speakup punctuation level/speed
-    echo 2 > /sys/accessibility/speakup/punc_level
-    echo 2 > /sys/accessibility/speakup/reading_punc
-    echo 2 > /sys/accessibility/speakup/soft/rate
+    # echo 2 > /sys/accessibility/speakup/punc_level
+    # echo 2 > /sys/accessibility/speakup/reading_punc
+    # echo 2 > /sys/accessibility/speakup/soft/rate
 
     # Ensure the userspace speakup connector is up
-    systemctl enable espeakup
-    systemctl start espeakup
+    # systemctl enable espeakup
+    # systemctl start espeakup
+
+    # Ensure the userspace speakup connector is down
+    systemctl mask espeakup
 fi
 
 cd /installer

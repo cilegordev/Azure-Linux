@@ -96,7 +96,6 @@ const (
 const (
 	InstallerExperienceTitle        = "Select Installation Experience"
 	InstallerTerminalNoSpeechOption = "Terminal Installer"
-	InstallerTerminalOption         = InstallerTerminalNoSpeechOption + " (Speech Enabled)"
 	InstallerGraphicalOption        = "Graphical Installer"
 )
 
