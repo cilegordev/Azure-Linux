@@ -1,0 +1,12 @@
+{
+    "packages": [
+        "dnf",
+        "htop",
+        "neofetch",
+        "nano",
+        "tree",
+        "wget",
+        "zsh",
+        "zsh-plugins"
+    ]
+}
