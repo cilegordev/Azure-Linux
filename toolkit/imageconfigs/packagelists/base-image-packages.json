@@ -2,6 +2,7 @@
     "packages": [
         "azurelinux-release",
         "azurelinux-repos",
+        "azurelinux-repos-extended",
         "azurelinux-repos-ms-non-oss",
         "azurelinux-repos-ms-oss",
         "bash",
