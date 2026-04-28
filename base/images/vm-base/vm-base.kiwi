@@ -85,8 +85,6 @@
         <package name="attr" />
         <package name="audit" />
         <package name="bash-completion" />
-        <package name="bc" />
-        <package name="binutils" />
         <package name="bind-utils" />
         <package name="brotli" />
         <package name="bzip2" />
@@ -101,7 +99,6 @@
         <package name="device-mapper-event" />
         <package name="dnf5" />
         <package name="dnf5-plugins" />
-        <package name="elfutils" />
         <package name="file" />
         <package name="firewalld" />
         <package name="glibc" />
