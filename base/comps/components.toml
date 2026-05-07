@@ -2323,7 +2323,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.opendbx]
 [components.opendnssec]
 [components.openexr2]
-[components.openfec]
 [components.openjade]
 [components.openjpeg]
 [components.openjph]
