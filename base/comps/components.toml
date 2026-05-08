@@ -458,7 +458,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.festival]
 [components.festival-freebsoft-utils]
 [components.ffcall]
-[components.ffmpeg]
 [components.fftw]
 [components.fido-device-onboard]
 [components.file]
