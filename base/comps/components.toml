@@ -493,7 +493,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.freeipa-healthcheck]
 [components.freeipmi]
 [components.freeradius]
-[components.freerdp]
 [components.freetds]
 [components.freetype]
 [components.freexl]
