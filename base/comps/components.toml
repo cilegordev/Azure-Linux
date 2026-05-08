@@ -6792,7 +6792,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.speex]
 [components.speexdsp]
 [components.sphinx]
-[components.spice-gtk]
 [components.spice-protocol]
 [components.spirv-headers]
 [components.spirv-llvm-translator]
