@@ -1798,7 +1798,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.libgxim]
 [components.libgxps]
 [components.libharu]
-[components.libheif]
 [components.libical]
 [components.libicns]
 [components.libid3tag]
