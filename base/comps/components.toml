@@ -16,7 +16,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.DevIL]
 [components.FP16]
 [components.GitPython]
-[components.GraphicsMagick]
 [components.HdrHistogram_c]
 [components.JUnitParams]
 [components.Judy]
