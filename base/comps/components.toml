@@ -5235,7 +5235,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.rust-doc-comment]
 [components.rust-docmatic]
 [components.rust-document-features]
-[components.rust-dolby_vision]
 [components.rust-dotenv]
 [components.rust-dotenvy]
 [components.rust-downcast]
