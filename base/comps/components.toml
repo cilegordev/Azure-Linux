@@ -1389,7 +1389,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.image-builder]
 [components.imake]
 [components.imath]
-[components.imlib2]
 [components.imsettings]
 [components.ini2toml]
 [components.inih]
