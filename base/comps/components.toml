@@ -6951,7 +6951,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.velocity]
 [components.'vid.stab']
 [components.vipr]
-[components.vips]
 [components.virglrenderer]
 [components.virt-manager]
 [components.virt-what]
