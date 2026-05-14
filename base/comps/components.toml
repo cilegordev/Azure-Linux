@@ -7033,7 +7033,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.yajl]
 [components.yaksa]
 [components.yaml-cpp]
-[components.yara]
 [components.yarnpkg]
 [components.yelp]
 [components.yelp-tools]
