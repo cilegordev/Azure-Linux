@@ -2242,7 +2242,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.numatop]
 [components.numpy]
 [components.nunit]
-[components.nv-codec-headers]
 [components.nvme-cli]
 [components.nvmetcli]
 [components.nvml]
