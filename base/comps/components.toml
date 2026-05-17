@@ -1722,7 +1722,6 @@ includes = ["**/*.comp.toml", "component-check-disablement.toml", "component-min
 [components.libdbi]
 [components.libdbusmenu]
 [components.libdc1394]
-[components.libdca]
 [components.libdecor]
 [components.libdex]
 [components.libdicom]
