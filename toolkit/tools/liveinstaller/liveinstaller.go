@@ -98,7 +98,7 @@ func main() {
 
 	logger.PanicOnError(err)
 
-	// Change the boot order by either changing the EFI boot order or ejecting CDROM.
+	// Change the boot order by either changing the EFI boot order or ejecting AZURELINUX.
 	updateBootOrder(installDetails)
 	ejectDisk()
 }
