@@ -1,0 +1,25 @@
+{
+  "packages": [
+    "azurelinux-repos-env",
+    "pulseaudio",
+    "pulseaudio-module-x11",
+    "kernel-drivers-gpu",
+    "kernel-drivers-intree-amdgpu",
+    "kernel-drivers-sound",
+    "kernel-drivers-extras",
+    "kernel-headers",
+    "mesa-dri-drivers-extras",
+    "linux-firmware-intel",
+    "linux-firmware-amd",
+    "wireless-regdb",
+    "pciutils",
+    "usbutils",
+    "util-linux",
+    "glibc-iconv",
+    "zenity",
+    "zram",
+    "nano",
+    "htop",
+    "neofetch"
+  ]
+}
