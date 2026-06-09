@@ -1,6 +1,8 @@
 {
     "packages": [
         "dnf",
+        "tdnf",
+        "curl",
         "wget"
     ]
 }

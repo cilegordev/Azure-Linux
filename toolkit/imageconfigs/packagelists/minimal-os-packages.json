@@ -28,8 +28,7 @@
         "systemd-networkd",
         "systemd-resolved",
         "systemd-udev",
-        "tdnf",
-        "tdnf-plugin-repogpgcheck",
+        "dnf",
         "util-linux",
         "zlib"
     ]
