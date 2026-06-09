@@ -388,3 +388,28 @@ MigrationBackup/
 
 # Output from the "download_spec_sources.sh" script
 downloaded_sources/
+
+# Compile
+toolkit/out
+error.log
+packages*
+RPMS
+worker_chroot
+rootfs
+rootfs_chroot.sh
+
+# Livekit
+NOTED
+cdrom
+core
+change-initrd.sh
+change-squashfs.sh
+corefs_chroot.sh
+corefs_cleaner.sh
+
+# Test
+tmp
+azurelinux*.iso
+
+# Addons
+toolkit/resources/imageconfigs/additionalfiles/iso_initrd/azurelinux-skus.tar.zstd
