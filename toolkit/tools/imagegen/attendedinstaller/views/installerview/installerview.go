@@ -32,8 +32,7 @@ const (
 )
 
 const (
-	terminalUISpeechOption = iota
-	terminalUINoSpeechOption
+	terminalUINoSpeechOption = iota
 	calamaresUIOption
 )
 
@@ -57,7 +56,7 @@ func New(calamaresInstallFunc func()) *InstallerView {
 		calamaresInstallFunc: calamaresInstallFunc,
 	}
 
-	iv.installerOptions = []string{uitext.InstallerTerminalOption, uitext.InstallerTerminalNoSpeechOption}
+	iv.installerOptions = []string{uitext.InstallerTerminalNoSpeechOption}
 
 	_, err := exec.LookPath(calamaresToolName)
 	if err != nil {
@@ -197,13 +196,7 @@ func (iv *InstallerView) OnShow() {
 func (iv *InstallerView) onNextButton(nextPage func()) {
 	switch iv.optionList.GetCurrentItem() {
 	case terminalUINoSpeechOption:
-		err := speakuputils.StopSpeakup()
-		if err != nil {
-			logger.Log.Warnf("Failed to stop speakup, continuing")
-			err = nil
-		}
-		fallthrough
-	case terminalUISpeechOption:
+		_ = speakuputils.StopSpeakup()
 		nextPage()
 	case calamaresUIOption:
 		iv.calamaresInstallFunc()
