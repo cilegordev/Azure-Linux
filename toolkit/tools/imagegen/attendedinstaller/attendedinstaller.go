@@ -296,10 +296,10 @@ func (ai *AttendedInstaller) initializeUI() (err error) {
 		SetTextColor(ai.backdropStyle.PrimaryTextColor).
 		SetText(uitext.NavigationHelp).
 		SetChangedFunc(func() {
-			ai.app.Draw()
+		        ai.app.Draw()
 		})
 
-	releaseVer, err := releaseVersion(osReleaseFile)
+	_, err = releaseVersion(osReleaseFile)
 	if err != nil {
 		return
 	}
@@ -307,9 +307,9 @@ func (ai *AttendedInstaller) initializeUI() (err error) {
 	osVersionText := tview.NewTextView().
 		SetTextAlign(tview.AlignRight).
 		SetTextColor(ai.backdropStyle.PrimaryTextColor).
-		SetText(releaseVer).
+		SetText("AZURE LINUX 3.0 LIVE ISO - UNOFFICIAL").
 		SetChangedFunc(func() {
-			ai.app.Draw()
+		        ai.app.Draw()
 		})
 
 	ai.titleText = tview.NewTextView().
