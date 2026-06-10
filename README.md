@@ -3,7 +3,7 @@
   Azure Linux 3.0
 </h1>
 
-## [Build Users Guide](docs/building/building.md)
+## [Build Users Guide](toolkit/docs/building/building.md)
 Requires: golang <= 1.24.13
 
 ## Schema
